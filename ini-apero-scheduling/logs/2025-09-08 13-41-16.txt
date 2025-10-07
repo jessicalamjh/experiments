@@ -1,0 +1,26 @@
+Updating Maris Basha: maris@ini.ethz.ch
+Updating Patrick Bösch: boeschpa@ini.uzh.ch
+Updating Anna Kiepura: akiepura@ini.ethz.ch
+Updating Tianshu Shen: None -> https://services.ini.uzh.ch/admin/modules/uzh/person.php?id=106143&back=../uzh/people
+Updating Yassine Taoudi Benchekroun: ytaoud@ini.ethz.ch
+Updating Yuhang Wang: yuhang@ini.ethz.ch
+Updating Nicolas Kopp: nicolas.kopp@uzh.ch
+Updating Liyuan Li: liyuan.li@uzh.ch
+Updating Emilly Zoë Jeanne Sidaine--Daumiller: emillyzoejeanne.sidaine-daumiller@uzh.ch
+Number of non students: 5 -> 15
+Updated supervisor for name='Christian Metzner': Fritjof Helmchen -> Melika Payvand
+Updated supervisor for name='Raimon Bullich': None -> Benjamin Grewe
+Updated supervisor for name='Orhun Eren': None -> Mehmet Fatih Yanik
+Updated supervisor for name='Leonardo Martinelli': None -> Giacomo Indiveri
+Updated supervisor for name='Qi Shen': None -> Giacomo Indiveri
+Updated supervisor for name='Elia Torre': None -> Valerio Mante
+Updated supervisor for name='Michele Viscione': None -> Benjamin Grewe
+Updated supervisor for name='Luca Nicolas Yapura': None -> Richard Hahnloser
+Updated supervisor for name='Mohamed Abid': None -> Shih-Chii Liu
+Updated supervisor for name='Isabella Chesney': None -> Elisa Donati
+Updated supervisor for name='Elena Cucculelli': None -> Daniel Kiper
+Updated supervisor for name='Joelle Faybishenko': None -> Benjamin Grewe
+Updated supervisor for name='Lena Fiedor': None -> Valerio Mante
+Updated supervisor for name='Valentin Magis': None -> Valerio Mante
+Updated supervisor for name='Xiaoliang Wang': None -> Benjamin Grewe
+Updated supervisor for name='Zhining Zhang': None -> Mehmet Fatih Yanik
