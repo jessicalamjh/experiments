@@ -1,0 +1,78 @@
+<x_0.3643><y_0.5352><tbc>tuning data, we only lose 0.1-0.4 F1, still outperforming all existing systems by a wide margin.<sup>12</sup><x_0.4951><y_0.5461><class_Text>
+
+<x_0.3643><y_0.5539>### 4.3 SQuAD v2.0<x_0.4141><y_0.5578><class_Section-header>
+
+<x_0.3643><y_0.5625>The SQuAD 2.0 task extends the SQuAD 1.1 problem definition by allowing for the possibility that no short answer exists in the provided paragraph, making the problem more realistic.<x_0.4951><y_0.5867><class_Text>
+
+<x_0.3643><y_0.5891>We use a simple approach to extend the SQuAD v1.1 BERT model for this task. We treat questions that do not have an answer as having an answer span with start and end at the `[CLS]` token. The probability space for the start and end answer span positions is extended to include the position of the `[CLS]` token. For prediction, we compare the score of the no-answer span: _s_<sub>max11</sub>=_S-C+E-C_ to the score of the best non-null span<tbc><x_0.4951><y_0.6453><class_Text>
+
+<x_0.5049><y_0.4133>\(s_{i,j}=\text{max}_{j\ge 1}S-T_l+E-T_j\)<x_0.4961><y_0.4188><class_Formula>
+
+<x_0.5049><y_0.4203><tbc>. We predict a non-null answer when \(s_{i,j}>s_{\mathrm{max},1}+\tau\), where the threshold \(\tau\) is selected on the dev set to maximize F1. We did not use TriviaQA data for this model. We fine-tuned for 2 epochs with a learning rate of 5e-5 and a batch size of 48.<x_0.6367><y_0.45><class_Text>
+
+<x_0.5049><y_0.4531>The results compared to prior leaderboard entries and top published work (Sun et al., 2018; Wang et al., 2018b) are shown in  3, excluding systems that use BERT as one of their components. We observe a +5.1 F1 improvement over the previous best system.<x_0.6367><y_0.4898><class_Text>
+
+<x_0.5049><y_0.4969>### 4.4 SWAG<x_0.5391><y_0.5008><class_Section-header>
+
+<x_0.5049><y_0.5062>The Situations With Adversarial Generations (SWAG) dataset contains 113k sentence-pair completion examples that evaluate grounded commonsense inference (Zellers et al., 2018). Given a sentence, the task is to choose the most plausible continuation among four choices.<x_0.6367><y_0.5437><class_Text>
+
+<x_0.5049><y_0.5453>When fine-tuning on the SWAG dataset, we construct four input sequences, each containing the concatenation of the given sentence (sentence `h`) and a possible continuation (sentence `B`). The only task-specific parameters introduced is a vector whose dot product with the `[CLS]` token representation _C_ denotes a score for each choice which is normalized with a softmax layer.<x_0.6367><y_0.5961><class_Text>
+
+<x_0.5049><y_0.5984>We fine-tune the model for 3 epochs with a learning rate of 2e-5 and a batch size of 16. Results are presented in  4. BERT<sub>LARGE</sub> outperforms the authors’ baseline ESIM+ELMo system by +27.1% and OpenAI GPT by 8.3%.<x_0.6367><y_0.6297><class_Text>
+
+<x_0.5049><y_0.6367>## 5 Ablation Studies<x_0.5664><y_0.6406><class_Section-header>
+
+<x_0.5049><y_0.6477>In this section, we perform ablation experiments over a number of facets of BERT in order to better understand their relative importance. Additional<tbc><x_0.6367><y_0.6656><class_Text>
+
+<x_0.3643><y_0.6508><sup>12</sup>The TriviaQA data we used consists of paragraphs from TriviaQA-Wiki formed of the first 400 tokens in documents, that contain at least one of the provided possible answers.<x_0.4951><y_0.6648><class_Footnote>
+
+<x_0.4932><y_0.6719>4177<x_0.5068><y_0.675><class_Page-footer>
+
+<x_0.3701><y_0.3273>\begin{tabular}{ccccc}
+System & \multicolumn{2}{c}{Dev} & \multicolumn{2}{c}{Test} \\
+ & EM & F1 & EM & F1 \\
+\multicolumn{5}{c}{Top Leaderboard Systems (Dec 10th, 2018)} \\
+Human & - & - & 82.3 & 91.2 \\
+#1 Ensemble - sheet & - & - & 86.0 & 91.7 \\
+#2 Ensemble - QANet & - & - & 84.5 & 90.5 \\
+\multicolumn{5}{c}{Published} \\
+BiDAF+ELMo (Single) & - & 85.6 & - & 85.8 \\
+R.M. Reader (Ensemble) & 81.2 & 87.9 & 82.3 & 888.5 \\
+\multicolumn{5}{c}{Ours} \\
+BERT<sub>BASE</sub> (Single) & 80.8 & 88.5 & - & - \\
+BERT<sub>LARGE</sub> (Single) & 84.1 & 90.9 & - & - \\
+BERT<sub>LARGE</sub> (Ensemble) & 85.8 & 91.8 & - & - \\
+BERT<sub>LARGE</sub> (Sgl+TriviaQA) & **84.2** & **91.1** & **85.1** & **91.8** \\
+BERT<sub>LARGE</sub> (Em+TriviaQA) & **86.2** & **92.2** & **87.4** & **93.2** \\
+\end{tabular}<x_0.4893><y_0.4086><class_Table>
+
+<x_0.3691><y_0.4414>\begin{tabular}{ccccc}
+System & \multicolumn{2}{c}{Dev} & \multicolumn{2}{c}{Test} \\
+ & EM & F1 & EM & F1 \\
+\multicolumn{5}{c}{Top Leaderboard Systems (Dec 10th, 2018)} \\
+Human & 86.3 & 89.0 & 86.9 & 89.5 \\
+#1 Single - MIR-MRC (F-Net) & - & - & 74.8 & 78.0 \\
+#2 Single - sheet & - & - & 74.2 & 77.1 \\
+\multicolumn{5}{c}{Published} \\
+use (Ensemble) & - & - & 71.4 & 74.9 \\
+SLQA+ (Single) & - & - & 71.4 & 74.4 \\
+\multicolumn{5}{c}{Ours} \\
+BERT<sub>LARGE</sub> (Single) & 78.7 & 81.9 & 80.0 & 83.1 \\
+\end{tabular}<x_0.4902><y_0.5039><class_Table>
+
+<x_0.5293><y_0.3281>\begin{tabular}{ccc}
+System & Dev & Test \\
+ESIM+GioVe & 51.9 & 52.7 \\
+ESIM+ELMo & 59.1 & 99.2 \\
+OpenAI GPT & - & 78.0 \\
+BERT<sub>BASE</sub> & 81.6 & - \\
+BERT<sub>LARGE</sub> & **86.6** & **86.3** \\
+Human (expert)<sup>†</sup> & - & 85.0 \\
+Human (5 annotations)<sup>‡</sup> & - & 88.0 \\
+\end{tabular}<x_0.6113><y_0.3758><class_Table>
+
+<x_0.3643><y_0.4172>2: SQuAD 1.1 results. The BERT ensemble is 7x systems which use different pre-training checkpoints and fine-tuning seeds.<x_0.4951><y_0.4336><class_Caption>
+
+<x_0.3643><y_0.5125>3: SQuAD 2.0 results. We exclude entries that use BERT as one of their components.<x_0.4951><y_0.5227><class_Caption>
+
+<x_0.5049><y_0.382>4: SWAG Dev and Test accuracies. <sup>†</sup> Human performance is measured with 100 samples, as reported in the SWAG paper.<x_0.6357><y_0.3984><class_Caption>

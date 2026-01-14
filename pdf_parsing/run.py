@@ -36,8 +36,8 @@ for filepath in sorted(list(glob.glob(f"data/*.png"))):
     generated_text = processor.batch_decode(outputs, skip_special_tokens=True)[0]
 
     # Export generated text
-    filename = os.path.basename(filepath)
-    print(generated_text, file=open(f"output/generated_texts/{filename}", 'w'))
+    filename = os.path.splitext(os.path.basename(filepath))[0]
+    print(generated_text, file=open(f"output/generated_texts/{filename}.txt", 'w'))
 
     # Postprocess and re-export
     classes, bboxes, texts = extract_classes_bboxes(generated_text)
@@ -49,7 +49,7 @@ for filepath in sorted(list(glob.glob(f"data/*.png"))):
     blank_text_in_figures = False # remove text inside 'Picture' class
     texts = [postprocess_text(text, cls = cls, table_format=table_format, text_format=text_format, blank_text_in_figures=blank_text_in_figures) for text, cls in zip(texts, classes)]
     
-    f_out = open(f"output/markdown/{filename}", 'w')
+    f_out = open(f"output/markdown/{filename}.md", 'w')
     for cl, bb, txt in zip(classes, bboxes, texts):
         print(cl, ': ', txt, file=f_out)
     f_out.close()
