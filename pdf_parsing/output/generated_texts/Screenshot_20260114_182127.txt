@@ -1,0 +1,64 @@
+<x_0.3125><y_0.2781>NATURE COMMUNICATIONS | https://doi.org/10.1038/s41467-020-19686-w ARTICLE<x_0.6855><y_0.2875><class_Page-header>
+
+<x_0.3125><y_0.6469>probe for a manipulation bias in Area X, we made irreversible bilateral lesions in Area X of deaf birds. When these birds were subjected to substituted LO feedback, none of them (n=5) changed pitch in excess to deaf controls (p>0.05 for all birds, two-sampled t-test) (Fig. 5a–c). One bird in which the lesion did not overlap with either Area X or LMAN in both hemispheres changed pitch significantly compared to deaf controls (p=0.01, two-sampled t-test). In lesioned subs birds, the magnitude of<x_0.4961><y_0.6977><class_Text>
+
+<x_0.501><y_0.3602>average pitch change per day was smaller than in unlesioned subs birds (difference −0.22 d’day, p=0.003, tstat=−3.62, df=13, two-tailed two-sample t-test), and the daily pitch change in lesioned subs birds was not significantly different from zero (−0.02 d’day, p=0.64, SE=0.04, tstat=−0.47, df=83, n=5 birds, fixed effect) (Fig. 5d). Similarly to subs birds, lesioned subs birds have a tendency to produce on average more song motifs on the last three days of substitution (154 song motifs or 41% more) than on the last three days of baseline, Supplementary Fig. 3d. In combination, these findings show that Area X is necessary for expressing adaptive pitch responses to substituted feedback.<x_0.6855><y_0.4281><class_Text>
+
+<x_0.502><y_0.4391>Discussion<x_0.5361><y_0.4453><class_Section-header>
+
+<x_0.502><y_0.4461>Our finding that the song system is able to assign a cross-modal light stimulus the role of an instructive pitch-biasing motor signal helps to refine our understanding of the neural basis of vocal learning. Namely, because targeted changes of vocal skills can occur without hearing, it follows that evaluation of auditory performance is not a prerequisite for vocal plasticity in adulthood, unlike commonly assumed13,37. Our findings do not rule out the use of vocal performance for template-based song learning18, but they showcase that some forms of vocal learning do not rely on auditory representations of song, and that pathways not concerned with audition are able to efficiently operate on the brain’s motor representations of song. The high efficiency and temporal precision of light-instructed pitch changes agree with previous observations that binary feedback signals can promote robust motor learning39,40.<x_0.6846><y_0.5375><class_Text>
+
+<x_0.502><y_0.5383>To enable flexible assignment of visual signals (light intensity) to specific motor features (pitch), the visual system must feed into the song system in a computationally powerful way. Not much is known about the neural circuits that provide substituting visual stimuli to motor centers, but we find that the cross-modal learning circuit involves the basal ganglia, which provides some clues as to the neural mechanisms underlying substituted motor learning. For one, given that cerebral neurons efferent to the basal ganglia do not even respond to auditory feedback during singing11–43, it is unlikely that multimodal visual-vocal neurons are involved in cross-modal learning. Rather, a large body of work on the basal ganglia evidences an error-like signal that reinforce time-resolved motor representations of song33,35,44. Our work therefore suggests that the avian basal-ganglia part of the song system has evolved to support multimodal learning independent of the sensory modality of reinforcement.<x_0.6846><y_0.6359><class_Text>
+
+<x_0.502><y_0.6367>Our key finding is that elimination of auditory feedback induces appetitiveness of an otherwise aversive visual reinforcer of song. This finding is unrelated to whether deaf birds perceive light stimuli differently than hearing birds, as we did not probe behavioral responses to visual input other than via song. Rather, the missing feedback seems to unleash the need for a substitute, uncovering a strong drive to manipulate sensory input. Such a manipulation drive better explains our observations than intrinsic motivations such as activity and exploration15. Our interpretation is that normally, in healthy vocalizers, the need to manipulate is satisfied and does not constrain the brain’s valence system. However, when<x_0.6855><y_0.6969><class_Text>
+
+<x_0.3125><y_0.7016>NATURE COMMUNICATIONS | (2020)15:940 | https://doi.org/10.1038/s41467-020-19686-w | www.nature.com/naturecommunications 7<x_0.6855><y_0.7086><class_Page-footer>
+
+<x_0.3135><y_0.3133>\begin{tabular}{ccc}
+**Reinforcement learning model characteristic** & **Additional info** & **Can it explain valence inversion?**\\
+Changes in baseline reward & Caused by deafening & No\\
+\multirow{3}{*}{Exploration bonus} & For informative actions & No\\
+ & For diverse actions & No\\
+ & For simple actions & No\\
+Manipulation bonus & For impact & Yes\\
+\end{tabular}<x_0.6836><y_0.3531><class_Table>
+
+<x_0.3154><y_0.3594>a
+b
+Baseline
+6000
+LPS
+Pitch (Hz)
+5550
+Area X
+5000
+0
+5
+10
+15
+Time (days)
+C
+0.5
+d
+Baseline
+0.2
+Pitch change (d'/day)
+Pitch change (d'/day)
+0.1
+Lesion subs high
+0
+Lesion subs low
+-0.5
+1
+2
+3
+4
+5
+Birds
+Birds
+Baseline
+Syssbs<x_0.4932><y_0.5453><class_Picture>
+
+<x_0.3125><y_0.5508>Fig. 5 A basal ganglia pathway is necessary for adaptive responses to substituted feedback. a Example sagittal brain section of a bird with lesion (yellow arrows) in Area X (dashed white ellipse). The lamina palliobubipalialis (LPS) is indicated by the white dashed line. The scale bar on the bottom right indicates 500 μm. Anterior is towards the left posterior to the right. b Pitch values of all syllable resditions in an example deaf bird with bilateral lesions in Area X. There is no clear adaptive response to substitution. c The average pitch changes (d’/day) in deaf birds with Area X lesions during baseline (light gray), during high-pitch substitution (blue), and during low-pitch substitution (green). d The two fixed-effect terms of a mixed linear effect model and their standard errors; the daily pitch changes (1) during baseline (left bar, p=0.21, tstat=1.27, df=83, n=5 birds), and (2) during substitution in the direction of increasing LO rate (right bar, p=0.64, SE=0.04, tstat=−0.47, df=83, n=5 birds) are not significantly different from zero (not indicated in the figure).<x_0.4951><y_0.6352><class_Caption>
+
+<x_0.3145><y_0.3>1 Reinforcement learning characteristics and their compatibility with valence inversion.<x_0.583><y_0.3078><class_Caption>
